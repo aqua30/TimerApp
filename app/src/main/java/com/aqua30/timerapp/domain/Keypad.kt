@@ -3,7 +3,9 @@ package com.aqua30.timerapp.domain
 /**
  * Created by Saurabh
  */
-sealed class Keypad(val value: String) {
+sealed class Keypad(
+    val value: String,
+) {
     object Key1: Keypad("1")
     object Key2: Keypad("2")
     object Key3: Keypad("3")
@@ -16,4 +18,5 @@ sealed class Keypad(val value: String) {
     object Key0: Keypad("0")
     object Key00: Keypad("00")
     object KeyDelete: Keypad("x")
+    object KeyPlay: Keypad("play")
 }

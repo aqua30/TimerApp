@@ -6,6 +6,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -21,6 +22,7 @@ import com.aqua30.timerapp.ui.theme.TimerAppTheme
 fun TimeUnit(
     time: TimeUnit = TimeUnit(),
     unit: String,
+    textColor: Color = GRAY_TEXT
 ) {
 
     Row(
@@ -33,7 +35,7 @@ fun TimeUnit(
             style = TextStyle(
                 fontSize = 65.sp,
                 fontWeight = FontWeight.Medium,
-                color = GRAY_TEXT,
+                color = textColor,
             )
         )
         Text(
@@ -42,7 +44,7 @@ fun TimeUnit(
             style = TextStyle(
                 fontSize = 65.sp,
                 fontWeight = FontWeight.Medium,
-                color = GRAY_TEXT,
+                color = textColor,
             ),
         )
         Text(
@@ -51,7 +53,7 @@ fun TimeUnit(
             style = TextStyle(
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Medium,
-                color = GRAY_TEXT,
+                color = textColor,
             ),
         )
     }

@@ -32,13 +32,16 @@ class TimerViewModel: ViewModel() {
             Keypad.Key00 -> {
                 if (timeState.value.isDataEmpty()
                     || timeState.value.isHoursHalfFull()
-                    || timeState.value.isDataFull())
+                    || timeState.value.isDataFull()
+                )
                     return
                 addTime(Keypad.Key0.value)
                 addTime(Keypad.Key0.value)
             }
             Keypad.Key0 -> {
-                if (timeState.value.isDataEmpty() || timeState.value.isDataFull())
+                if (timeState.value.isDataEmpty()
+                    || timeState.value.isDataFull()
+                )
                     return
                 addTime(key.value)
             }
