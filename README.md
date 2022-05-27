@@ -6,6 +6,10 @@ This branch contains the functionality of selecting a time for the timer.
 
 https://user-images.githubusercontent.com/4559525/170739429-5085e7bf-570c-49ac-b979-81d6b4fe3d7e.mp4
 
+## Medium Article
+
+https://saurabhpant.medium.com/time-selection-screen-for-timer-app-in-jetpack-compose-part-i-537ffcedb68e
+
 ### Functionality 🧩
 - Time display has a logic of shifting the units from right to left
 - Time display changes color if at least a second's unit is selected
