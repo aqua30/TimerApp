@@ -1,5 +1,7 @@
 # TimerApp
 
+https://user-images.githubusercontent.com/4559525/170630628-ed43abfd-a89a-40b6-bec6-32062e503ec8.mp4
+
 ## Timer Selection Screen
 
 This branch contains the functionality of selecting a time for the timer.
