@@ -3,6 +3,7 @@ package com.aqua30.timerapp.screens
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import com.aqua30.timerapp.domain.Keypad
+import com.aqua30.timerapp.domain.TimerContent
 import com.aqua30.timerapp.domain.UiEvent
 import com.aqua30.timerapp.domain.model.TimeData
 import com.aqua30.timerapp.domain.model.TimeUnit
@@ -13,6 +14,7 @@ import com.aqua30.timerapp.domain.model.TimeUnit
 class TimerViewModel: ViewModel() {
 
     var timeState = mutableStateOf(TimeData())
+    var timerContent = mutableStateOf(TimerContent.SELECTION)
 
     fun onEvent(event: UiEvent) {
         when(event) {
@@ -24,12 +26,22 @@ class TimerViewModel: ViewModel() {
 
     private fun onKeyPress(key: Keypad) {
         when(key) {
+            Keypad.KeyPlay -> {
+                /* when play key is clicked */
+                timerContent.value = TimerContent.RUNNER
+            }
+            Keypad.KeyStop -> {
+                /* when stop key is clicked */
+                timerContent.value = TimerContent.SELECTION
+            }
             Keypad.KeyDelete -> {
+                /* when delete key is clicked */
                 if (timeState.value.isDataEmpty())
                     return
                 deleteTime()
             }
             Keypad.Key00 -> {
+                /* when double zero key is clicked */
                 if (timeState.value.isDataEmpty()
                     || timeState.value.isHoursHalfFull()
                     || timeState.value.isDataFull()
@@ -39,6 +51,7 @@ class TimerViewModel: ViewModel() {
                 addTime(Keypad.Key0.value)
             }
             Keypad.Key0 -> {
+                /* when zero key is clicked */
                 if (timeState.value.isDataEmpty()
                     || timeState.value.isDataFull()
                 )
@@ -46,6 +59,7 @@ class TimerViewModel: ViewModel() {
                 addTime(key.value)
             }
             else -> {
+                /* when any num key is clicked */
                 if (timeState.value.isDataFull())
                     return
                 addTime(key.value)

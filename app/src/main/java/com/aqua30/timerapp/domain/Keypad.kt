@@ -19,4 +19,5 @@ sealed class Keypad(
     object Key00: Keypad("00")
     object KeyDelete: Keypad("x")
     object KeyPlay: Keypad("play")
+    object KeyStop: Keypad("stop")
 }
