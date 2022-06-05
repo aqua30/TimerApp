@@ -1,7 +1,6 @@
 package com.aqua30.timerapp.components.timer_unit
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.text.BasicText
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -19,7 +18,7 @@ import com.aqua30.timerapp.ui.theme.TimerAppTheme
  * Created by Saurabh
  */
 @Composable
-fun TimeUnit(
+fun TimeDisplayUnit(
     time: TimeUnit = TimeUnit(),
     unit: String,
     textColor: Color = GRAY_TEXT
@@ -63,6 +62,6 @@ fun TimeUnit(
 @Composable
 fun TimerUnitPreview() {
     TimerAppTheme {
-        TimeUnit(time = TimeUnit(), unit = "s")
+        TimeDisplayUnit(time = TimeUnit(), unit = "s")
     }
 }

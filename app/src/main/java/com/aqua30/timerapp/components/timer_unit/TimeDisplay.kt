@@ -3,9 +3,6 @@ package com.aqua30.timerapp.components.timer_unit
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.aqua30.timerapp.domain.model.TimeData
@@ -26,19 +23,19 @@ fun TimeDisplay(
     Row(
         horizontalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        TimeUnit(
+        TimeDisplayUnit(
             time = time.hours,
             unit = "h",
             textColor = timeUnitColor
         )
 
-        TimeUnit(
+        TimeDisplayUnit(
             time = time.mins,
             unit = "m",
             textColor = timeUnitColor
         )
 
-        TimeUnit(
+        TimeDisplayUnit(
             time = time.secs,
             unit = "s",
             textColor = timeUnitColor
