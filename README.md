@@ -8,7 +8,7 @@ https://user-images.githubusercontent.com/4559525/170739429-5085e7bf-570c-49ac-b
 
 ## Medium Article
 
-https://saurabhpant.medium.com/time-selection-screen-for-timer-app-in-jetpack-compose-part-i-537ffcedb68e
+[Read here](https://proandroiddev.com/time-selection-screen-for-timer-app-in-jetpack-compose-part-i-537ffcedb68e?source=user_profile---------4----------------------------)
 
 ## Functionality 🧩
 - Time display has a logic of shifting the units from right to left
